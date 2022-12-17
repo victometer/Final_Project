@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Neighbourhood Gym</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+</head>
+<body>
+<main class="menu">
+    <nav>
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li class="dropdown">
+            <span>Gym Classes</span>
+            <ul class="dropdown-content">
+                <li><a href="/gym_classes">All Classes</a></li>
+                <li><a href="/gym_classes/new">Add New Class</a></li>
+            </ul>
+        </li>    
+        <!-- <div class="dropdown">
+            <span>Mouse over me</span>
+            <div class="dropdown-content">
+            <p>Hello World!</p>
+            </div>
+          </div> -->
+        <li class = "dropdown">
+            Members
+            <ul class="dropdown-content">
+                <li><a href="/members">All Members</a></li>
+                <li><a href="/members/new">Add New Member</a></li>
+            </ul>
+        </li>
+        <li>
+            Sessions
+        <a href="/sessions">Sessions</a>
+        </li>
+        
+    </ul>
+    </nav>
+    <section id="content">
+        {% block content %}
+
+        {% endblock%}
+    </section>
+    </main>
+</body>
+</html>
