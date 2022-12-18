@@ -11,23 +11,23 @@ session_repository.delete_all()
 member_repository.delete_all()
 gym_class_repository.delete_all()
 
-member1 = Member ('Joe')
+member1 = Member ('Joe Wilson')
 member_repository.save(member1)
 
-member2 = Member ('Kate')
+member2 = Member ('Kate Hughes')
 member_repository.save(member2)
 
-member3 = Member ('Sam')
+member3 = Member ('Sam Knowles')
 member_repository.save(member3)
 
 
-gym_class1 = Gym_class ('Pilates', '12:45', 60)
+gym_class1 = Gym_class ('F45', '12:45', 60)
 gym_class_repository.save(gym_class1)
 
-gym_class2 = Gym_class ('Zumba', '10:45', 60)
+gym_class2 = Gym_class ('BoxFit', '10:45', 60)
 gym_class_repository.save(gym_class2)
 
-gym_class3 = Gym_class ('Yoga', '19:45', 60)
+gym_class3 = Gym_class ('Spin', '19:45', 60)
 gym_class_repository.save(gym_class3)
 
 session1 = Session (member1, gym_class1)

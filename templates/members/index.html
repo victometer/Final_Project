@@ -3,13 +3,9 @@
 {% block content %}
 <h1>Members</h1>
 
-<table>
-    <tr>
-    <th>Name</th>
-    </tr>
-    {% for member in members %}
-    <tr> <a href="/members/{{ member.id }}"> </a>
-    <td>{{member.name}} </td>
+{% for member in members %}
+<div id="hey-member">
+<a href="/members/{{ member.id }}">{{member.name}} </a>
+</div>
     {% endfor %}
-</table>
 {% endblock %}

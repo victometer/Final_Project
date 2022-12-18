@@ -66,7 +66,7 @@ table {
 }
 
 #all-classes tr:nth-child(even){
-    background-color: #a6a4a4;
+    background-color: #c3bebe;
 }
 /* 
 #all-classes tr:hover {background-color: #ddd;} */
@@ -108,7 +108,7 @@ h2 {
 
 /* Content */
 #content {
-    background-color: rgb(135, 130, 130);
+    background-color: rgb(161, 159, 159);
 }
 
 /* New Class */
@@ -143,4 +143,61 @@ h2 {
     color: white;
     font-size: 20px;
     font-weight:bold ;
+}
+
+#show-class p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+#show-class ul{
+    text-align: start;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+h4{
+    text-decoration: underline;
+}
+/* Members */
+
+#members form {
+    display: flex;
+}
+
+#members p {
+    width: 30%;
+    padding: 10px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+    border: 3px solid #275070; 
+}
+
+#members input {
+    width: 30%;
+    padding: 20px;
+    margin: 8px;
+    border: 3px solid #ccc;
+    outline: none;
+}
+/* #members input[type=submit] {
+    background-color: #275070;
+    color: white;
+    font-size: 20px;
+    font-weight:bold ;
+    padding: 14px 20px;
+    margin: 8px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+} */
+
+#hey-member {
+    padding: 20px;
+}
+
+#hey-member a {
+    font-size: 20px;
 }

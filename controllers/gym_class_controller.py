@@ -34,3 +34,17 @@ def create_new_class():
     gym_class_repository.save(new_class)
     return redirect('/gym_classes')
 
+@gym_classes_blueprint.route("/gym_classes/<id>/edit")
+def edit_class(id):
+    gym_class = gym_class_repository.select(id)
+    return render_template('gym_classes/edit.html', gym_class=gym_class)
+
+@gym_classes_blueprint.route("/gym_classes/<id>", methods=["POST"])
+def update_gym_class(id):
+    name = request.form["name"]
+    time = request.form["time"]
+    duration = request.form["duration"]
+    gym_class = Gym_class(name, time, duration, id)
+    gym_class_repository.update(gym_class)
+    return redirect("/gym_classes")
+

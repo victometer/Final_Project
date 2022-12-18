@@ -1,15 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> {{gym_class.name}} </h1>
+<h2> {{gym_class.name}} </h2>
 
-<p>Time: {{ gym_class.time }}</p>
-<p>Duration: {{ gym_class.duration }}</p>
+<div id="show-class">
+    <p>Time: {{ gym_class.time }}</p>
+    <p>Duration: {{ gym_class.duration }}</p>
 
-<ul>
-    {% for member in members  %}
-    <li>{{member.name}}</li>
-    {% endfor %}
-</ul>
+    <ul>
+        <h4>Members in this class:</h4>
+        {% for member in members  %}
+        <li>{{member.name}}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+<a href="{{ gym_class.id }}/edit">Edit Class</a>
 
 {% endblock %}

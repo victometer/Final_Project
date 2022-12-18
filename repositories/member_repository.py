@@ -50,3 +50,9 @@ def members_for_gym_class(gym_class):
 def delete_all():
     sql = 'DELETE FROM members'
     run_sql(sql)
+
+
+def update(member):
+    sql = "UPDATE members SET name = %s WHERE id = %s"
+    values = [member.name, member.id]
+    run_sql(sql, values)

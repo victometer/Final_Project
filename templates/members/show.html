@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> {{member.name}} </h2>
+<div>
+    {% for gym_class in gym_classes  %}
+    <p>{{gym_class.name}}</p>
+    {% endfor %}
+</div>
+<a href="{{ member.id }}/edit">Edit Member</a>
+
+
+{% endblock %}

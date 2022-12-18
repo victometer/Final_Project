@@ -32,7 +32,25 @@ def select(id):
         gym_class = Gym_class(result['name'], result['time'], result['duration'], result['id'])
     return gym_class
 
+def gym_classes_for_member(member):
+    gym_classes = []
+
+    sql = 'SELECT gym_classes.* FROM gym_classes INNER JOIN sessions ON sessions.gym_class_id = gym_class.id WHERE member_id = %s'
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        gym_class = Gym_class(row['name'], row['time'], row['duration'], row['id'])
+        gym_classes.append(gym_class)
+    return gym_classes
+
+
 
 def delete_all():
     sql = 'DELETE FROM gym_classes'
     run_sql(sql)
+
+def update(gym_class):
+    sql = "UPDATE gym_classes SET (name, time, duration) = (%s, %s, %s) WHERE id = %s"
+    values = [gym_class.name, gym_class.time, gym_class.duration, gym_class.id]
+    run_sql(sql, values)
