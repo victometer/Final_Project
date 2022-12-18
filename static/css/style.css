@@ -2,6 +2,12 @@
 nav ul{
     display: flex;
     list-style: none;
+    background-color: #275070;
+    color: #f9fdff;
+    
+}
+a {
+    color: #f9fdff;
 }
 
 nav ul li {
@@ -11,7 +17,7 @@ nav ul li {
     }
 
 .menu a:hover  {
-    background-color: antiquewhite;
+    background-color: #2d2d2d;
 
 }
 
@@ -23,7 +29,7 @@ nav ul li {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #275070;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
@@ -37,18 +43,104 @@ nav ul li {
 h1 {
     text-align: center;
     font-size: 40px;
+    color: white;
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
     font-size: 30px;
+    margin: 50px;
+    padding-right: 70px;
+    /* overflow: auto; */
 }
 
-/* #top-row {
+#all-classes {
+    /* border-collapse: collapse; */
+    width: 100%;
+}
+#all-classes th, #all-classes td {
+    border: 1px solid #ddd; 
     padding: 10px;
-} */
+    color: white;
+}
 
-th {
-    padding: 10px;
+#all-classes tr:nth-child(even){
+    background-color: #a6a4a4;
+}
+/* 
+#all-classes tr:hover {background-color: #ddd;} */
+
+#top-row {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #275070;
+    color: #f9fdff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 20px ;
+}
+
+/* Media styling */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+}
+.box {
+    flex: 50%;
+    max-width: 50%;
+    border-radius: 5%;
+}
+
+.box img {
+    /* margin-top: 8px; */
+    vertical-align: middle;
+    border-radius: 5%;
+    width: 450px;
+    height: 300px;
+}
+
+/* Content */
+#content {
+    background-color: rgb(135, 130, 130);
+}
+
+/* New Class */
+
+#new-class {
+    align-items: center;
+}
+#new-class input, select {
+    width: 50%;
+    padding: 12px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    /* box-sizing: border-box; */
+}
+
+#new-class button {
+    width: 50%;
+    background-color: #275070;
+    color: white;
+    font-size: 20px;
+    font-weight:bold ;
+    padding: 14px 20px;
+    margin: 8px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+#new-class label {
+    color: white;
+    font-size: 20px;
+    font-weight:bold ;
 }

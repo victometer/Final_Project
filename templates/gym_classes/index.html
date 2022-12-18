@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Gym Classes</h1>
+<h1>Upcoming Gym Classes</h1>
 
 
-<table>
+<table id="all-classes">
     <tr id="top-row">
     <th>Class Name</th>
     <th>Class Time</th>
@@ -19,5 +19,33 @@
         
     {% endfor %}
 </table>
+
+<h2>Gym Class Description</h2>
+<div class="wrap">
+    <div class="box">
+        <div class="boxInner">
+        <img src="https://cdn11.bigcommerce.com/s-yn8q9n4bvw/product_images/uploaded_images/2/2017/02/C9U8698-2.jpg" />
+        <div class="titleBox">Spin</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxInner">
+        <img src="https://img.freepik.com/free-photo/full-shot-fit-people-doing-burpees-gym_23-2149445898.jpg?w=2000&t=st=1671308777~exp=1671309377~hmac=d5d64b247f6aaf970de8324e9abc2984d84e6b3b5108c2a7b383351461cf0efc" />
+        <div class="titleBox">F45</div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxInner">
+        <img src="https://www.keppnerboxing.com/wp-content/uploads/2021/04/DSCF0387-187739.jpg" />
+        <div class="titleBox">BoxFit</div>
+    </div>  
+    <div class="box">
+        <div class="boxInner">
+        <img src="https://www.24hourfitness.com/images/pages/GX24/GX24_subpages/burn/burn-bodyattack.jpg" />
+        <div class="titleBox">Core</div>
+        </div>
+    </div>
+    </div>
+</div>
 
 {% endblock %}
