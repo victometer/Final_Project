@@ -201,3 +201,12 @@ h4{
 #hey-member a {
     font-size: 20px;
 }
+/* Book Class */
+#book-class button {
+    padding: 10px;
+    margin-top: 5px;
+    width: 80px;
+    background-color: #275070;
+    color: white;
+    cursor: pointer;
+}

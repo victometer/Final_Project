@@ -11,6 +11,7 @@ CREATE TABLE gym_classes (
     id SERIAL PRIMARY KEY,
     name VARCHAR (255),
     time VARCHAR (255),
+    capacity INT,
     duration INT 
 );
 

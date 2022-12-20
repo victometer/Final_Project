@@ -9,12 +9,20 @@
     <th>Class Name</th>
     <th>Class Time</th>
     <th>Duration</th>
+    <th>Capacity</th>
     </tr>
     {% for gym_class in gym_classes %}
     <tr> 
-    <td><a href="/gym_classes/{{ gym_class.id }}">{{gym_class.name}} </a></td>
+    <td><a href="/gym_classes/{{ gym_class.id }}">{{gym_class.name}} </a> 
+        <div id="book-class">
+            <form action="/gym_classes/{{ gym_class.id }}/book">
+                <button type="submit" value="Book">Book</button>
+            </form>
+        </div>
+        </td>
     <td>{{ gym_class.time }}</td>
     <td>{{ gym_class.duration }}</td>
+    <td>{{ gym_class.capacity }}</td>
     </tr>
         
     {% endfor %}
