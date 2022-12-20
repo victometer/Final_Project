@@ -51,7 +51,7 @@ def delete_all():
     run_sql(sql)
 
 def update(gym_class):
-    sql = "UPDATE gym_classes SET (name, time, duration) = (%s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE gym_classes SET (name, time, duration, capacity) = (%s, %s, %s, %s) WHERE id = %s"
     values = [gym_class.name, gym_class.time, gym_class.duration, gym_class.capacity, gym_class.id]
     run_sql(sql, values)
 

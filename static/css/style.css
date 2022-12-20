@@ -68,8 +68,7 @@ table {
 #all-classes tr:nth-child(even){
     background-color: #c3bebe;
 }
-/* 
-#all-classes tr:hover {background-color: #ddd;} */
+
 
 #top-row {
     padding-top: 12px;
@@ -84,6 +83,7 @@ h2 {
     font-size: 30px;
     color: white;
     padding-top: 20px ;
+    padding-bottom: 20px;
 }
 
 /* Media styling */
@@ -100,17 +100,48 @@ h2 {
 
 .box img {
     /* margin-top: 8px; */
+    opacity: 1;
+    margin-left: 75px;
     vertical-align: middle;
     border-radius: 5%;
-    width: 450px;
-    height: 300px;
+    width: 550px;
+    height: 400px;
+    /* transition: .5s ease;
+    backface-visibility: hidden; */
+}
+.box :hover img {
+    opacity: 0.3;
+}
+.text-on-image {
+    /* font-style: italic;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+
+.overlay {
+    transition: .5s ease;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
 }
 
 /* Content */
+
 #content {
     background-color: rgb(161, 159, 159);
 }
-
+.edit-link {
+    color: #275070;
+}
 /* New Class */
 
 #new-class {

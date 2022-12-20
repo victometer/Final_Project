@@ -33,7 +33,7 @@ def create_new_class():
     name = request.form['name']
     time = request.form['time']
     duration = request.form['duration']
-    capacity = request.fotm['capacity']
+    capacity = request.form['capacity']
     new_class = Gym_class(name, time, duration, capacity)
     gym_class_repository.save(new_class)
     return redirect('/gym_classes')
@@ -71,5 +71,6 @@ def show_updated_class(id):
         session = Session(member, gym_class)
         session_repository.save(session)
     else: 
-        return render_template('gym_classes/book.html', error = True, gym_class=gym_class, members=members)
+        error = True
+        return render_template('gym_classes/book.html', error = error, gym_class=gym_class, members=members)
     return redirect('/gym_classes/'+ id)

@@ -5,7 +5,7 @@
 
 <form action="/gym_classes/{{ gym_class.id }}/book" method = "POST">
     <div id="book_class">
-        {% if True %}
+        {% if error == True %}
         <div id="error">
         <p>Sorry, this class is full</p>
         </div>
