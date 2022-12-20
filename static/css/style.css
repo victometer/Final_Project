@@ -149,6 +149,7 @@ h2 {
     text-align: center;
     color: white;
     font-size: 20px;
+    font-weight: bold;
 }
 #show-class ul{
     text-align: start;
@@ -156,6 +157,14 @@ h2 {
     font-size: 20px;
     padding-bottom: 20px;
 }
+#edit-class {
+    color: #275070;
+    margin-left: 30px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 h4{
     text-decoration: underline;
 }
@@ -181,18 +190,6 @@ h4{
     border: 3px solid #ccc;
     outline: none;
 }
-/* #members input[type=submit] {
-    background-color: #275070;
-    color: white;
-    font-size: 20px;
-    font-weight:bold ;
-    padding: 14px 20px;
-    margin: 8px;
-    margin-bottom: 12px;
-    border: none;
-    border-radius: 5%;
-    cursor: pointer;
-} */
 
 #hey-member {
     padding: 20px;
@@ -203,10 +200,86 @@ h4{
 }
 /* Book Class */
 #book-class button {
-    padding: 10px;
+    padding: 5px;
     margin-top: 5px;
     width: 80px;
     background-color: #275070;
     color: white;
     cursor: pointer;
 }
+
+#error p {
+    font-size: 20px;
+    color:white;
+    background-color: rgb(167, 167, 72);
+}
+
+/* New Member */
+
+#new-member {
+    align-items: center;
+}
+#new-member input {
+    width: 50%;
+    padding: 12px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+
+#new-member button {
+    width: 50%;
+    background-color: #275070;
+    color: white;
+    font-size: 20px;
+    font-weight:bold ;
+    padding: 14px 20px;
+    margin: 8px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+#new-member label {
+    color: white;
+    font-size: 20px;
+    font-weight:bold;
+    margin-left: 10px;
+} 
+
+/* Edit Class */
+
+#gym_class-edit {
+    align-items: center;
+}
+#gym_class-edit input {
+    width: 50%;
+    padding: 12px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+
+#gym_class-edit button {
+    width: 50%;
+    background-color: #275070;
+    color: white;
+    font-size: 20px;
+    font-weight:bold ;
+    padding: 14px 20px;
+    margin: 8px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+#gym_class-edit label {
+    color: white;
+    font-size: 20px;
+    font-weight:bold;
+    margin-left: 10px;
+} 

@@ -48,7 +48,7 @@ def update_gym_class(id):
     name = request.form["name"]
     time = request.form["time"]
     duration = request.form["duration"]
-    capacity = request.fotm['capacity']
+    capacity = request.form['capacity']
     gym_class = Gym_class(name, time, duration, capacity, id)
     gym_class_repository.update(gym_class)
     return redirect("/gym_classes")
@@ -57,16 +57,19 @@ def update_gym_class(id):
 def book_class(id):
     gym_class = gym_class_repository.select(id)
     members = member_repository.select_all()
-    return render_template('gym_classes/book.html', gym_class=gym_class, members=members)
+    return render_template('gym_classes/book.html', error = False, gym_class=gym_class, members=members)
 
 
 @gym_classes_blueprint.route('/gym_classes/<id>/book', methods = ['POST'])
 def show_updated_class(id):
 
     gym_class = gym_class_repository.select(id)
-    member_id = request.form["member-name"]
-    member = member_repository.select(member_id)
-    session = Session(gym_class, member)
-    session_repository.save(session)
+    members = member_repository.members_for_gym_class(gym_class)
+    if gym_class.capacity > len(members):
+        member_id = request.form["member-id"]
+        member = member_repository.select(member_id)
+        session = Session(member, gym_class)
+        session_repository.save(session)
+    else: 
+        return render_template('gym_classes/book.html', error = True, gym_class=gym_class, members=members)
     return redirect('/gym_classes/'+ id)
-

@@ -4,16 +4,19 @@
 <h2>Update this Class</h2>
 <form action="/gym_classes/{{ gym_class.id }}" method="POST">
     <div id="gym_class-edit">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ gym_class.name }}">
-        <label for="name">Time:</label>
-        <input type="time" id="time" name="time" value="{{ gym_class.time }}">
-        <label for="duration">Duration:</label>
-        <input type="number" id="duration" name="duration" value="{{ gym_class.duration }}">
-        <label for="capacity">Capacity:</label> 
+        <label for="name">Name:</label> <br>
+        <input type="text" id="name" name="name" value="{{ gym_class.name }}"> <br>
+        <label for="name">Time:</label> <br>
+        <input type="time" id="time" name="time" value="{{ gym_class.time }}"> <br>
+        <label for="duration">Duration:</label> <br>
+        <input type="number" id="duration" name="duration" value="{{ gym_class.duration }}"> <br>
+        <label for="capacity">Capacity:</label> <br>
         <input type="number" id = "capacity" name ="capacity" value="{{ gym_class.capacity }}"> 
-        <button type="submit">Edit Class</button>
+        <button type="submit" id="edit-class">Edit Class</button>
+        
+    </div>
     </div>
 </form>
 
 {% endblock %}
+
