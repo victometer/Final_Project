@@ -31,15 +31,11 @@ This will create two tables and populate it with multiple rows
 
 If you have Postico, you can validate that the database has been setup:
 
-connect to localhost, and navigate to localhost
+1. Connect to localhost, and navigate to localhost
 
-![Localhost location](/images/readme_setup_images/Screenshot%202023-02-01%20at%2020.22.21.png?raw=true "Optional Title")
+2. Local host should be populated with two tables: Classes and Members
 
-Local host should be populated with two tables
-![Localhost location](/images/readme_setup_images/Screenshot%202023-02-01%20at%2020.27.44.png?raw=true "Optional Title")
-
-Inside those tables should be populated with entries into rows
-![Localhost location](/images/readme_setup_images/Screenshot%202023-02-01%20at%2020.28.56.png?raw=true "Optional Title")
+3. Inside those tables should be populated with entries into rows
 
 ### Install flask
 
@@ -73,4 +69,4 @@ You should see the following:
 
 ### Open project in browser
 
-The project should now open. To access the homepage go to:  ![Localhost location](/images/readme_setup_images/Screenshot%202023-02-01%20at%2022.11.04.png?raw=true "Optional Title")
+The project should now open. 
